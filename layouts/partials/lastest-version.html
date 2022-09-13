@@ -1,0 +1,45 @@
+{{$data := .Site.Params.latestVer }}
+
+{{if .Params.latestVer }}
+<section class='section latest-ver {{if ne .RelPermalink "/documentation/" }} {{if $data.light}}light{{end}} {{end}}'>
+    <div class="container">
+        <div class="row d-none d-md-block">
+            <div class="col"><h4>Lastest Version</h4></div>
+        </div>
+        <div class="row ">
+            <div class="col">
+                <div class="ver-box">                 
+                    <div class="row">
+                        <div class="col-md-8 offset-md-4  col-lg-6 offset-lg-6 info">
+                            <h6>New release on {{.Site.Params.ReleasedOn}}</h6>
+                            <h3 class="mb-2">Fluent Bit {{.Site.Params.LastVersion}} is out!</h3>
+                            {{if ne .RelPermalink "/documentation/" }}
+                                {{if $data.text}}
+                                    <p>{{$data.text}}</p>
+                                {{end}}
+                            {{end}}
+                            <div class="py-4"><a href="{{$data.btnUrl}}" class="btn-gradient text-uppercase">{{$data.btnText}}</a></div> 
+                            <p class="mt-2">
+                                <small>{{$data.smallText | safeHTML}}</small>
+                            </p>
+                            
+                        </div>
+                    </div>   
+                </div>
+            </div>
+        </div>
+        {{if ne .RelPermalink "/documentation/" }}
+
+
+        {{if $data.bottomText}}
+        <div class="row">
+            <div class="col text-right">
+                <a href="{{ $data.bottomUrl}}" class="read">{{ $data.bottomText}}</a>
+            </div>
+        </div>
+        {{end}}
+        {{end}}
+
+    </div>
+</section>
+{{ end }}

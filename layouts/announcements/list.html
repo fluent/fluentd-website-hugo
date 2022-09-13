@@ -1,0 +1,22 @@
+
+{{ define "main" }}
+
+    {{- partial "header.html" . -}} 
+    {{- partial "lastest-version.html" . -}}
+    <!--{{- partial "knowledge-base.html" . -}}
+    {{- partial "new-changes.html" . -}}
+     {{- partial "older-ver.html" . -}}   -->
+
+    <section class="section doc-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    {{.Content}}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- {{- partial "contributor.html" . -}} -->
+
+{{ end }}
