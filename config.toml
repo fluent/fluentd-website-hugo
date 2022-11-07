@@ -6,46 +6,47 @@ googleAnalytics = ""
 
 [params]
 email = ""
-logo = "/images/miscellaneous/fluentd-logo.png"
-logo2 = "/images/logo-white.svg"
-footer_logo = "/images/footer-logo.svg"
+logo = "/images/miscellaneous/fluentd-logo-w.png"
+logo2 = "/images/miscellaneous/fluentd-logo-w.png"
+footer_logo = "/images/miscellaneous/fluentd-logo-w.png"
 copyright = "© 2010-2022 The Fluentd Project. Fluentd is a CNCF graduated project."
-lastVersion = "v1.15.2"
-releasedOn = "August 22, 2022"
+lastVersion = "v1.15.3"
+releasedOn = "November 02, 2022"
+releaseURL = "https://github.com/fluent/fluentd/releases/tag/v1.15.3"
 noteUrl = "https://docs.fluentd.org/"
 
    [menu]
     [[menu.main]]
-        identifier = "documentation"
+        identifier = "Overview"
         url = "https://docs.fluentd.org/"
         name = "DOCUMENTATION"
         weight = 1
         tab = "external" 
     [[menu.main]]
-        identifier = "how it works"
+        identifier = "Home"
         url = "/how-it-works/"
         name = "how it works"
         weight = 2
-    [[menu.main]]
-        identifier = "release notes"
-        url = "/announcements/"
-        name = "RELEASE NOTES"
-        weight = 3    
-    [[menu.main]]
-        identifier = "Enterprise"
-        url = "/enterprise/"
-        name = "Enterprise"
-        weight = 4    
-    [[menu.main]]
-        identifier = "Community"
-        url = "/community/"
-        name = "Community"
-        weight = 5 
-    [[menu.main]]
-        identifier = "blog"
-        url = "/blog/"
-        name = "Blog"
-        weight = 7   
+    # [[menu.main]]
+    #     identifier = "release notes"
+    #     url = "/announcements/"
+    #     name = "RELEASE NOTES"
+    #     weight = 3    
+    # [[menu.main]]
+    #     identifier = "Enterprise"
+    #     url = "/enterprise/"
+    #     name = "Enterprise"
+    #     weight = 4    
+    # [[menu.main]]
+    #     identifier = "Community"
+    #     url = "/community/"
+    #     name = "Community"
+    #     weight = 5 
+    # [[menu.main]]
+    #     identifier = "blog"
+    #     url = "/blog/"
+    #     name = "Blog"
+    #     weight = 7   
 
     [[menu.main]]
         identifier = "slack"
@@ -54,13 +55,13 @@ noteUrl = "https://docs.fluentd.org/"
         weight = 8
         pre = "/other-images/slack.svg"
         slack = "/other-images/slack-w.svg"
-    # [[menu.main]]
-    #     identifier = "downloadNow"
-    #     url = "https://launchpass.com/fluent-all"
-    #     name = "download now"
-    #     weight = 9
-    #     pre = "/images/DN-Button.png"
-    #     slack = "/images/DN-Button.png"
+    [[menu.main]]
+        identifier = "downloadNow"
+        url = "https://launchpass.com/fluent-all"
+        name = "download now"
+        weight = 9
+        pre = "/images/DN-Button.png"
+        slack = "/images/DN-Button.png"
 
     
     [params.latestVer]

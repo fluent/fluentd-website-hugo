@@ -20,9 +20,11 @@
                                 </ul>
                             {{else}}
                             <a href="{{ .buttonUrl | safeHTML}}" class="btn btn-gradient">{{ .button | safeHTML}}</a>
-                            <p class="last-ver">Last Version {{$lastVer }}  </p>
+                            <!-- TODO: Add Release Link -->
+                            <a href="{{ .params.releaseURL | safeHTML}}">
+                                <p class="last-ver">Last Version {{$lastVer }}</p>
+                            </a>
                             <p class="ver mt-1">Released On <strong>{{$releasedOn}}</strong></p>   
-
                             {{end}}
                         </div>
                     {{end}}
