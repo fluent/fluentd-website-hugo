@@ -1,0 +1,76 @@
+
+{{$headerTheme := .Params.headerTheme}}
+<!--Header-->
+<header class="header {{ if not .IsHome}}hm-b70{{end}}">    
+    <nav class="navbar navbar-expand-md  fixed-top  {{ if not .IsHome}} {{if $headerTheme}}navbar-light{{else}}header-scrolled{{ end }}{{ end }}">
+      <div class="container">        
+          <a class="navbar-brand" href="/" data-aos="zoom-in">
+            {{ if .IsHome}}
+              <img src="{{.Site.Params.logo | relURL }}" alt="{{.Site.Title }}"> 
+              {{else}}
+              {{if $headerTheme}}
+              <img src="{{.Site.Params.logo | relURL }}" alt="{{.Site.Title }}"> 
+              {{else}}                
+                <img src="{{.Site.Params.logo2 | relURL }}" alt="{{.Site.Title }}">
+              {{end}}
+            {{ end }}            
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" 
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <!-- <span class="navbar-toggler-icon"></span> -->
+            <i class="fa fa-bars"></i>
+          </button>
+        <div class="collapse navbar-collapse sm-mobile" id="navbarCollapse">
+
+          <div class="mobile-view d-md-none text-center">
+            <a class="navbar-brand" href="/" data-aos="zoom-in">            
+                <img src="/images/mobile-logo.svg" alt="{{.Site.Title }}"> 
+              </a>
+              
+              <p>The preferred choice for cloud and containerized environments.</p>
+
+              <p class="text-gradient">Deployed Over One Billion Times</p>
+          </div>
+
+
+          <ul class="navbar-nav ml-auto" data-aos="fade-left" data-aos-delay="100">
+            {{ $currentPage := . }}
+            {{ range .Site.Menus.main }}
+              {{ $active := or (eq $currentPage.Title .Name) (or ($currentPage.HasMenuCurrent "main" .) ($currentPage.IsMenuCurrent "main" .)) }}
+
+              {{ if .HasChildren }}
+                <!-- Navbar dropdown -->
+                <li class="nav-item dropdown" >
+                    <a href="#" id="{{ .Name }}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" 
+                    class='nav-link dropdown-toggle {{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}active{{ end }} {{ if $active }}active{{ end }}' > {{ .Name }}  </a>
+                    <div class="dropdown-menu" aria-labelledby="{{ .Name }}">
+                        {{ range .Children }}
+                        <a href="{{ .URL }}" class="dropdown-item">{{ .Name }}</a>
+                        {{end}}
+                    </div>
+                </li>
+              {{ else }}
+                {{if .Pre}}                  
+                  <li class="nav-item">                    
+                    <a href="{{ .URL  }}" class="nav-link "><img src="{{.Pre}}" alt="{{.Identifier}}"></a>
+                  </li>
+                  {{else}}
+                  <li class="nav-item">
+                    <a href="{{ .URL  }}" class='nav-link {{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}active{{ end }} {{ if $active }}active{{ end }}'  {{if eq .Identifier "documentation" }} target="_blank" {{end}}>{{.Name}}
+                     </a>
+                  </li>
+                {{end}}
+              {{ end }}              
+            {{end}}          
+          </ul>
+
+          <div class="nav-copyright">
+            © 2021 Fluent Bit. All rights reserved
+          </div>
+        </div>
+      </div>
+    </nav>
+      
+
+</header>
+

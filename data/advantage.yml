@@ -1,0 +1,29 @@
+- heading: "Unified Logging Layer"
+  link: "#"
+  linkText: ""
+  icon: "/other-images/event-driven-architecture.svg"
+  description: Fluentd decouples data sources from backend systems by providing a <a href="/blog/unified-logging-layer">unified logging layer</a> in between. This layer allows developers and data analysts to utilize many types of logs as they are generated. Just as importantly, it mitigates the risk of "bad data" slowing down and misinforming your organization.
+
+- heading: "Simple and Easy yet Flexible"
+  link: "#"
+  linkText: ""
+  icon: "/other-images/dynamic-routing.svg"
+  description: Fluentd can be set up on your laptop in less than 10 minutes. You can <a href="/download">download it here</a> and try it right now. Fluentd's 500+ plugins makes it compatible with dozens of <a href="/datasources">data sources</a> and <a href="/dataoutputs">data outputs</a>. Plugins are easy to write and deploy, too.
+
+- heading: "Open Source"
+  link: "#"
+  linkText: ""
+  icon: "/other-images/flexible-configuration.svg"
+  description: Fluentd is Apache 2.0 Licensed, fully open source software. That means your imagination, not license restrictions, is the limit of what you can achieve with Fluentd. The source code is available on <a href="http://github.com/fluent/fluentd">GitHub</a>.
+
+# - heading: "Proven Reliability and Performance"
+#   link: "#"
+#   linkText: ""
+#   icon: "/other-images/robust-handler.svg"
+#   description: <a href="/testimonials">5,000+ data-driven companies</a> rely on Fluentd to differentiate their products and services through a better use and understanding of their log data. In fact, according to <a href="https://www.datadoghq.com/docker-adoption/#6">the survey</a> by Datadog, Fluentd is the <u>7th top technologies running on Docker</u> container environments.
+
+# - heading: "Community"
+#   link: "#"
+#   linkText: ""
+#   icon: "/other-images/upstream-manager-sm.svg"
+#   description: The <a href="/community">community</a> behind Fluentd keeps improving the software and helps one another to make Fluentd useful for everyone.

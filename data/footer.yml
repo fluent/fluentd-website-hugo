@@ -1,0 +1,38 @@
+- linkHeading:  Overview 
+  lists:
+  - text: What we Do
+    url: "#"    
+  - text: Why Fluentd?
+    url: "#"    
+  - text: User testimonials
+    url: "#"    
+  - text: FAQs
+    url: "#"
+- linkHeading:  Resources 
+  lists:
+  - text: Documentation
+    url: "https://docs.fluentbit.io/manual/"    
+  - text: Data sources
+    url: "#"     
+  - text: Data outputs
+    url: "#"   
+  - text: Plugins
+    url: "#" 
+- linkHeading:  Community 
+  lists:
+  - text: Blog
+    url: "/blog/"  
+  - text: News Letter
+    url: "#" 
+  - text: Feedback
+    url: "#" 
+  - text: Contributing
+    url: "#" 
+  - text: Community List
+    url: "#"  
+  - text: Related Projects
+    url: "#"
+- linkHeading:  Download 
+  button: DOWNLOAD NOW
+  buttonUrl: "https://docs.fluentbit.io/manual/installation/getting-started-with-fluent-bit"
+  version: released on Oct 10, 2021

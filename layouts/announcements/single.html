@@ -1,0 +1,29 @@
+{{ define "main" }}    
+    {{- partial "header.html" . -}}
+    {{if eq .RelPermalink "/announcements/older-versions/" }}
+        {{- partial "top-section.html" . -}} 
+    {{else}}        
+        {{- partial "hero-inner.html" . -}} 
+    {{end}}
+    {{if eq .RelPermalink "/announcements/older-versions/" }}
+        {{- partial "older-ver.html" . -}}
+    {{end}}
+
+    {{- partial "knowledge-base.html" . -}}
+    {{- partial "new-changes.html" . -}}
+    {{- partial "contributor.html" . -}}
+    <section class="section doc-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    {{.Content}}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    {{- partial "lastest-version.html" . -}}
+    
+    
+{{ end }}

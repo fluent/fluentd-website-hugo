@@ -1,0 +1,18 @@
+{{ define "main" }}    
+    {{- partial "header.html" . -}}  
+    {{- partial "top-section.html" . -}} 
+    {{- partial "enterprise-list.html" . -}} 
+    {{- partial "community.html" . -}} 
+    {{- partial "meeting.html" . -}} 
+
+       
+    <section class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    {{.Content}}
+                </div>
+            </div>
+        </div>    
+    </section>
+{{ end }}
